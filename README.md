@@ -88,7 +88,7 @@ The following steps were taken to set up this project:
 	 		- Custom Export
 			- SQL format
 	     - Upload exported db to your storage bucket
-         - Create a new Cloud SQL Instance:
+         - Create a new Cloud SQL Instance (this may take a few minutes):
 	 		- SQL > Create Instance > Choose MySql
             - Show Configuration options
 			    - Under connectivity, enable Private IP
