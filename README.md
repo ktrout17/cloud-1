@@ -73,40 +73,11 @@ The following steps were taken to set up this project:
          - Add the contents of the previously downloaded service account key JSON file to keyFile.json
          - `cd /var/www/html/wp-content/themes/twentyseventeen/template-parts/footer`
          - open site-info.php file & adjust the following line to look as follows:
-           `printf( __( 'Proudly powered by %s<br>%s', 'twentyseventeen' ), 'WordPress', $_SERVER['SERVER_ADDR'] );`
-     - Login to phpMyAdmin 
-         - ExternalIP/phpmyadmin 
-		   - username: root
-		   - password: mysql-root-password found on VM info page
-         - Open the Wordpress database
-         - Export the database: 
-			   - Custom Export
-			   - SQL format  
-         - Upload exported db to your storage bucket
-         - Create a new Cloud SQL Instance:
-            - SQL > Create Instance > Choose MySql
-            - Show Configuration options
-	    - Under connectivity, enable Private IP
-            - Under Backups, select High availability under Availability section
-         - Create a new database
-			   - Databases > Create Database
-         - Import the SQL backup you uploaded to your bucket 
-			   - Overview > Import 
-			   - Select your bucket & backup
-			   - Select your newly created database in the drop down
-         - Create a new user
-		      - Users > Add User Account
-		      - Keep the username and password handy
-		      - Allow any host
-         - Edit the wp-config.php file, and change the following to their relevant details:
 	 
-	 	```
-	 	define( 'DB_NAME', 'Your SQL Database Name' );
-	 	define( 'DB_USER', 'Your SQL Database Username' );
-	 	define( 'DB_PASSWORD', 'Your SQL Database User Password' );
-	 	define( 'DB_HOST', 'Private IP Address of SQL Instance' );
-	 	define( 'DB_CHARSET', 'utf8mb4' );
-	 	define( 'DB_COLLATE', 'utf8mb4_general_ci' );
-	 	```
-
-	    
+	 		`printf( __( 'Proudly powered by %s<br>%s', 'twentyseventeen' ), 'WordPress', $_SERVER['SERVER_ADDR'] );`
+			
+    
+           
+	
+     
+       
