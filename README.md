@@ -123,7 +123,7 @@ The following steps were taken to set up this project:
         - ONLY ONCE YOU ARE SATISFIED WITH THE WORDPRESS CONFIGURATION:
             - Change the 2 site URL fields in the General Wordpress settings to either point to your domain (if you're using one) or the reserved static IP.
             
-        iv.  Uncomment the 3 lines in each of the .htaccess and wp-config.php files that deal with HTTPS.
+        iv.  IF USING A DOMAIN, uncomment the 3 lines in each of the .htaccess and wp-config.php files that deal with HTTPS.
     
 8. Shut down your wordpress instance
 9. Create a new custom image:
@@ -133,19 +133,19 @@ The following steps were taken to set up this project:
     - Compute Engine > Instance Template > Create instance template
 	- Change the boot disk to a custom image & select the image you just created
 	- Allow HTTP / HTTPS traffic
-11. Create a new Managed Instance Group:
-    - Compute Engine > Instance Groups > Create instance group
-	- Select the Instance template you created
-	- Autoscale
-	- Min instances: 2 , Max instances: 6
-	- Create health check (TCP) on port 80
-12. Create new Firewall Rule:
+11. Create new Firewall Rule:
     - VPC Network > Firewall > Create a new rule:
     - Ensure Direction is Ingress
     - Targets = All Instances
     - Source Filter = IP Ranges
     - Ranges = 130.211.0.0/22, 35.191.0.0/16
     - Specific TCP port of 80.
+12. Create a new Managed Instance Group:
+    - Compute Engine > Instance Groups > Create instance group
+	- Select the Instance template you created
+	- Autoscale
+	- Min instances: 2 , Max instances: 6
+	- Create health check (TCP) on port 80
 ## If using a Domain:
 13. Network Services > Loadbalancing:
     i. HTTPS Loadbalancer:
