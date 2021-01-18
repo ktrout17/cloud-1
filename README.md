@@ -191,6 +191,15 @@ The following steps were taken to set up this project:
         - IP address is previously reserved static IP address.
 14. You may have to wait 10-15min for everything to start working together.
 15. Once everything is setup, the Wordpress homepage should load when accessing the loadbalancer IP.
-	
+
+## Resources:
+- https://themeisle.com/blog/install-wordpress-on-google-cloud/
+- https://geekflare.com/google-cloud-cdn-test/
+- https://geekflare.com/gcp-load-balancer/
+- https://themeisle.com/blog/install-wordpress-on-google-cloud/
+- https://www.cloudbooklet.com/best-performance-wordpress-with-google-cloud-cdn-and-load-balancing/
+- http://www.mindinfinity.net/autoscaling-with-google-cloud/index.html
+- https://cloud.google.com/compute/docs/instance-groups
+- https://geekflare.com/google-cloud-sql-wordpress/
      
        
