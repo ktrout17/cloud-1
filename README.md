@@ -28,13 +28,13 @@ The following steps were taken to set up this project:
       - Search for Wordpress (Google Click to Deploy) & Launch
 	   - Use a region closest to you
 	   - Add admin email 
-	   - Allow HTTP & HTTPS traffic
    4. Create a new Service Account
       - IAM & Admin > Service Accounts > Create Service Account
-	   - Assign roles:
-         - `Cloud SQL > Cloud SQL Client`
-			- `Project > Editor`
-	   - Create a key for the service account and download in JSON format
+      - Assign roles:
+        	
+		- `Cloud SQL > Cloud SQL Client`
+		- `Project > Editor`
+      - Create a key for the service account and download in JSON format
    5. Reserve a static IP
       - VPC Network > External addresses > Reserve Static Address
 		   - Premium tier
@@ -45,7 +45,7 @@ The following steps were taken to set up this project:
 		- Multi-region
 		- Location closest to you
    7. Configure Wordpress & the server
-      i. SSH into the VM
+      - SSH into the VM
          - Compute Engine > VM instances
          - Under the `connect` tab, click SSH
          - `sudo su`
@@ -73,8 +73,8 @@ The following steps were taken to set up this project:
          - Add the contents of the previously downloaded service account key JSON file to keyFile.json
          - `cd /var/www/html/wp-content/themes/twentyseventeen/template-parts/footer`
          - open site-info.php file & adjust the following line to look as follows:
-         - `printf( __( 'Proudly powered by %s<br>%s', 'twentyseventeen' ), 'WordPress', $_SERVER['SERVER_ADDR'] );`
-     ii. Login to phpMyAdmin 
+           `printf( __( 'Proudly powered by %s<br>%s', 'twentyseventeen' ), 'WordPress', $_SERVER['SERVER_ADDR'] );`
+     - Login to phpMyAdmin 
          - ExternalIP/phpmyadmin 
 		   - username: root
 		   - password: mysql-root-password found on VM info page
@@ -100,13 +100,13 @@ The following steps were taken to set up this project:
 		      - Allow any host
          - Edit the wp-config.php file, and change the following to their relevant details:
 	 
-	 ```
-	 define( 'DB_NAME', 'Your SQL Database Name' );
-	 define( 'DB_USER', 'Your SQL Database Username' );
-	 define( 'DB_PASSWORD', 'Your SQL Database User Password' );
-	 define( 'DB_HOST', 'Private IP Address of SQL Instance' );
-	 define( 'DB_CHARSET', 'utf8mb4' );
-	 define( 'DB_COLLATE', 'utf8mb4_general_ci' );
-	 ```
+	 	```
+	 	define( 'DB_NAME', 'Your SQL Database Name' );
+	 	define( 'DB_USER', 'Your SQL Database Username' );
+	 	define( 'DB_PASSWORD', 'Your SQL Database User Password' );
+	 	define( 'DB_HOST', 'Private IP Address of SQL Instance' );
+	 	define( 'DB_CHARSET', 'utf8mb4' );
+	 	define( 'DB_COLLATE', 'utf8mb4_general_ci' );
+	 	```
 
 	    
