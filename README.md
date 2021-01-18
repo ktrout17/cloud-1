@@ -84,9 +84,9 @@ The following steps were taken to set up this project:
 			   - SQL format  
          - Upload exported db to your storage bucket
          - Create a new Cloud SQL Instance:
-			   - SQL > Create Instance > Choose MySql
+            - SQL > Create Instance > Choose MySql
             - Show Configuration options
-				- Under connectivity, enable Private IP
+	    - Under connectivity, enable Private IP
             - Under Backups, select High availability under Availability section
          - Create a new database
 			   - Databases > Create Database
@@ -96,24 +96,17 @@ The following steps were taken to set up this project:
 			   - Select your newly created database in the drop down
          - Create a new user
 		      - Users > Add User Account
-			   - Keep the username and password handy
-			   - Allow any host
+		      - Keep the username and password handy
+		      - Allow any host
          - Edit the wp-config.php file, and change the following to their relevant details:
-            
-            ```
-            define( 'DB_NAME', 'Your Database Name' );
-            		define( 'DB_USER', 'Your SQL Database Username' );
-            		define( 'DB_PASSWORD', 'Your SQL Database User Password' );
-            		define( 'DB_HOST', 'Private IP Address of SQL Instance' );
-            		define( 'DB_CHARSET', 'utf8' );
-            		define( 'DB_COLLATE', 'utf8_general_ci' );
-            ```
-     iii. Login to wordpress admin
-         - ExternalIP/wp-admin, using the details on the VM info page.
-         - Install & Activate the WP Offload Media Lite & W3 Total Cache plugins
-         - In the WP Offload Media settings:
-            - Browse existing buckets & select previously created Storage Bucket
-         - In the W3 Total Cache settings:
-            - In the CDN sub section of General Settings, Enable CDN and use Generic Mirror & save settings
-            - Back at the top, Click on View Required Changes and add the text displayed to your .htaccess file, below the commented out lines already there.
-     iv. Uncomment the 3 lines in each of the .htaccess and wp-config.php files that deal with HTTPS.
+	 
+	 ```
+	 define( 'DB_NAME', 'Your SQL Database Name' );
+	 define( 'DB_USER', 'Your SQL Database Username' );
+	 define( 'DB_PASSWORD', 'Your SQL Database User Password' );
+	 define( 'DB_HOST', 'Private IP Address of SQL Instance' );
+	 define( 'DB_CHARSET', 'utf8mb4' );
+	 define( 'DB_COLLATE', 'utf8mb4_general_ci' );
+	 ```
+
+	    
