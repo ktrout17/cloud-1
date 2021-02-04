@@ -203,7 +203,7 @@ The following steps were taken to set up this project:
 - https://geekflare.com/google-cloud-sql-wordpress/
 
 ## Contributors
-[amaquena](https://github.com/Amaquena) [@Deathshadowown](https://github.com/Deathshadowown)
+[@amaquena](https://github.com/Amaquena) [@Deathshadowown](https://github.com/Deathshadowown)
 ## Final Mark 100/100
      
        
